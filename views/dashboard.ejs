@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>ITEMS</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <% for( let index = 0; index < userDetails.length; index++ ) { %>
+                <tbody>
+                    <tr>
+                        <td><%= index +1 %></td>
+                        <td><%= userDetails[index].item %></td>
+                        <td><%= userDetails[index].price %></td>
+                        <td><%= userDetails[index].quantity %></td>
+                        <td>
+                            <form action="/delete" method="post">
+                                <input type="text" value="">
+                                <button>Delete</button>
+                            </form>
+                            <button>Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            <% } %>
+        </table>
+    </body>
+</html>
